@@ -1,0 +1,44 @@
+const alunos = [
+  {
+    nome: "Matheus",
+    primeiraProva: 9, 
+    segundaProva: 10,
+  },
+
+  {
+    nome: "Bruna",
+    primeiraProva: 8,
+    segundaProva: 9,
+  },
+
+  {
+    nome: "Gabriel",
+    primeiraProva: 7,
+    segundaProva: 6,
+  },
+
+  {
+    nome: "Biri",
+    primeiraProva: 4,
+    segundaProva: 2,
+  }, 
+]
+
+function printAlunoMedia(aluno){
+  if (((aluno.primeiraProva + aluno.segundaProva)/ 2) >= 7) {
+    alert(`     A média do aluno(a) ${aluno.nome} é: ${((aluno.primeiraProva + aluno.segundaProva) /2).toFixed(1)} 
+    Parabéns ${aluno.nome}, você foi aprovado no concurso!`)
+  } else {
+    alert(`A média do aluno(a) ${aluno.nome} é: ${((aluno.primeiraProva + aluno.segundaProva) /2).toFixed(1)}
+    Não foi dessa vez ${aluno.nome}, tente novamente! `)
+  }
+    
+    
+  
+  
+}
+
+for (let aluno of alunos) {
+  printAlunoMedia(aluno)
+  
+}
